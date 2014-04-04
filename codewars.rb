@@ -4,12 +4,14 @@
 ###                             ###
 ###################################
 
+def title(num)
+	puts ' '*27 + "CASE #{num}", '#'*60, "\n"
+end
 ###################################
 ###    				CASE 1            ###
 ###################################
 
-puts ' '*7 + 'CASE 1', '#'*20
-puts ""
+title(1)
 def solution(keys, default_value)
   hash = Hash.new
   keys.each do |i|
@@ -25,8 +27,7 @@ puts ""
 ###    				CASE 2            ###
 ###################################
 
-puts ' '*7 + 'CASE 2', '#'*20
-puts ""
+title(2)
 websites = []
 websites.push("codewars")
 puts websites
@@ -36,8 +37,7 @@ puts ""
 ###    				CASE 3            ###
 ###################################
 
-puts ' '*7 + 'CASE 3', '#'*20
-puts ""
+title(3)
 def flatten(array)
   return array.flatten(1)
 end
@@ -51,9 +51,8 @@ puts ""
 ###    				CASE 4            ###
 ###################################
 
+title(4)
 # Return only non-odd values
-puts ' '*7 + 'CASE 3', '#'*20
-puts ""
 def no_odds( values )
   evenOnly = []
   values.each do |i|
@@ -64,7 +63,9 @@ def no_odds( values )
   return evenOnly
 end
 
-#BEST SOLUTION
+print no_odds([1,2,3,4,5,6,67,3,1,2345,123,3,25,6,234,123,5,23])
+puts ""
+#BEST SOLUTIONS
 # def no_odds( values )
 #   values.select &:even?
 #   values.reject(&:odd?)
@@ -72,15 +73,41 @@ end
 #   values.select{|n| n % 2 == 0}
 # end
 
-print no_odds([1,2,3,4,5,6,67,3,1,2345,123,3,25,6,234,123,5,23])
-puts ""
-
 ###################################
 ###    				CASE 5            ###
 ###################################
 
+title(5)
+class Sleigh
+  def authenticate(name, password)
+    if (name == "Santa Claus" && password == "Ho Ho Ho!") then
+      return true
+    else
+    	return false
+    end
+  end
+end
 
+sleigh = Sleigh.new;
+puts sleigh.authenticate("Santa Claus", "Ho Ho Ho!"); #must return TRUE
+puts sleigh.authenticate("Santa", "Ho Ho Ho!"); // #must return FALSE
+puts sleigh.authenticate("Santa Claus", "Ho Ho!"); // #must return FALSE
+puts sleigh.authenticate("jhoffner", "CodeWars"); // #Nope, even Jake is not allowed to use the sleigh ;)
+puts ""
+#BEST METHOD
+# class Sleigh
+#   def authenticate(name, password)
+#     name == "Santa Claus" && password == "Ho Ho Ho!"
+#   end
+# end
 
+###################################
+###    				CASE 6            ###
+###################################
+
+title(6)
+puts "ehllo"
+puts ""
 
 
 
